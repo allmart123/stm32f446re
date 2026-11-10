@@ -12,6 +12,8 @@
 
 #include <stdint.h>
 
+#define __IO volatile
+
 /* ========================================================================== */
 /* =========              Memory Base Addresses                      ======== */
 /* ========================================================================== */
@@ -97,35 +99,35 @@
 /* =========            Peripheral Register Structures               ======== */
 /* ========================================================================== */
 typedef struct {
-    volatile uint32_t MODER;    /* GPIO port mode register               */
-    volatile uint32_t OTYPER;   /* GPIO port output type register        */
-    volatile uint32_t OSPEEDR;  /* GPIO port output speed register       */
-    volatile uint32_t PUPDR;    /* GPIO port pull-up/pull-down register  */
-    volatile uint32_t IDR;      /* GPIO port input data register         */
-    volatile uint32_t ODR;      /* GPIO port output data register        */
-    volatile uint32_t BSRR;     /* GPIO port bit set/reset register      */
-    volatile uint32_t LCKR;     /* GPIO port configuration lock register */
-    volatile uint32_t AFR[2];   /* GPIO alternate function registers     */
+    __IO uint32_t MODER;    /* GPIO port mode register               */
+    __IO uint32_t OTYPER;   /* GPIO port output type register        */
+    __IO uint32_t OSPEEDR;  /* GPIO port output speed register       */
+    __IO uint32_t PUPDR;    /* GPIO port pull-up/pull-down register  */
+    __IO uint32_t IDR;      /* GPIO port input data register         */
+    __IO uint32_t ODR;      /* GPIO port output data register        */
+    __IO uint32_t BSRR;     /* GPIO port bit set/reset register      */
+    __IO uint32_t LCKR;     /* GPIO port configuration lock register */
+    __IO uint32_t AFR[2];   /* GPIO alternate function registers     */
 } GPIO_TypeDef;
 
 typedef struct {
-    volatile uint32_t CR;         /* RCC clock control register              */
-    volatile uint32_t PLLCFGR;    /* RCC PLL configuration register         */
-    volatile uint32_t CFGR;       /* RCC clock configuration register        */
-    volatile uint32_t CIR;        /* RCC clock interrupt register            */
-    volatile uint32_t AHB1RSTR;   /* RCC AHB1 peripheral reset register      */
-    volatile uint32_t AHB2RSTR;   /* RCC AHB2 peripheral reset register      */
-    volatile uint32_t AHB3RSTR;   /* RCC AHB3 peripheral reset register      */
+    __IO uint32_t CR;         /* RCC clock control register              */
+    __IO uint32_t PLLCFGR;    /* RCC PLL configuration register         */
+    __IO uint32_t CFGR;       /* RCC clock configuration register        */
+    __IO uint32_t CIR;        /* RCC clock interrupt register            */
+    __IO uint32_t AHB1RSTR;   /* RCC AHB1 peripheral reset register      */
+    __IO uint32_t AHB2RSTR;   /* RCC AHB2 peripheral reset register      */
+    __IO uint32_t AHB3RSTR;   /* RCC AHB3 peripheral reset register      */
     uint32_t          RESERVED0;  /* Reserved slot                           */
-    volatile uint32_t APB1RSTR;   /* RCC APB1 peripheral reset register      */
-    volatile uint32_t APB2RSTR;   /* RCC APB2 peripheral reset register      */
+    __IO uint32_t APB1RSTR;   /* RCC APB1 peripheral reset register      */
+    __IO uint32_t APB2RSTR;   /* RCC APB2 peripheral reset register      */
     uint32_t          RESERVED1[2];
-    volatile uint32_t AHB1ENR;    /* RCC AHB1 peripheral clock enable        */
-    volatile uint32_t AHB2ENR;    /* RCC AHB2 peripheral clock enable        */
-    volatile uint32_t AHB3ENR;    /* RCC AHB3 peripheral clock enable        */
+    __IO uint32_t AHB1ENR;    /* RCC AHB1 peripheral clock enable        */
+    __IO uint32_t AHB2ENR;    /* RCC AHB2 peripheral clock enable        */
+    __IO uint32_t AHB3ENR;    /* RCC AHB3 peripheral clock enable        */
     uint32_t          RESERVED2;
-    volatile uint32_t APB1ENR;    /* RCC APB1 peripheral clock enable        */
-    volatile uint32_t APB2ENR;    /* RCC APB2 peripheral clock enable        */
+    __IO uint32_t APB1ENR;    /* RCC APB1 peripheral clock enable        */
+    __IO uint32_t APB2ENR;    /* RCC APB2 peripheral clock enable        */
     /* Note: Further registers like DCKCFGR exist on F446 for advanced clocks */
 } RCC_TypeDef;
 
