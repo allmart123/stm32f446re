@@ -17,10 +17,11 @@
  */
 
 
-#include "stm32_mem_map.h"
+#include "MEM_MAP.h"
 #include "HAL_DELAY.h"
 #include "HAL_GPIO.h"
 
+/* Delay time */
 #define _t 1000000UL
 
 
