@@ -1,12 +1,12 @@
 /**
  ******************************************************************************
  * @file           : main.c
- * @author         : allmart123
+ * @author         : _Margal_
  * @brief          : Main program body
  ******************************************************************************
  * @attention
  *
- * Copyright (c) 2026 allmart123.
+ * Copyright (c) 2026 _Margal_.
  * All rights reserved.
  *
  * This software is licensed under terms that can be found in the LICENSE file
