@@ -1,5 +1,5 @@
 /*
- * mem_map.h
+ * MEM_MAP.h
  *
  *  Created on: Jan 27, 2026
  *      Author: _Margal_
@@ -118,14 +118,14 @@ typedef struct {
     __IO uint32_t AHB1RSTR;   /* RCC AHB1 peripheral reset register      */
     __IO uint32_t AHB2RSTR;   /* RCC AHB2 peripheral reset register      */
     __IO uint32_t AHB3RSTR;   /* RCC AHB3 peripheral reset register      */
-    uint32_t          RESERVED0;  /* Reserved slot                           */
+    uint32_t      RESERVED0;  /* Reserved slot                           */
     __IO uint32_t APB1RSTR;   /* RCC APB1 peripheral reset register      */
     __IO uint32_t APB2RSTR;   /* RCC APB2 peripheral reset register      */
-    uint32_t          RESERVED1[2];
+    uint32_t      RESERVED1[2];
     __IO uint32_t AHB1ENR;    /* RCC AHB1 peripheral clock enable        */
     __IO uint32_t AHB2ENR;    /* RCC AHB2 peripheral clock enable        */
     __IO uint32_t AHB3ENR;    /* RCC AHB3 peripheral clock enable        */
-    uint32_t          RESERVED2;
+    uint32_t      RESERVED2;
     __IO uint32_t APB1ENR;    /* RCC APB1 peripheral clock enable        */
     __IO uint32_t APB2ENR;    /* RCC APB2 peripheral clock enable        */
     /* Note: Further registers like DCKCFGR exist on F446 for advanced clocks */
